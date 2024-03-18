@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/25/ce/ea/kingsford-hotel-manila.jpg?w=1200&h=-1&s=1");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <div id="login">
+        <table border="5">
+          <tr>
+            <td><h1>Welcome Back!</h1></td>
+          </tr>
+        </table>
+
+        <h2>PLEASE LOGIN</h2>
+        <label for="username"
+          ><font color="#FFF"><b>masukan username anda</b></font>
+        </label>
+        <form action="/" method="post">
+          <div class="field-wrap">
+            <input type="email" aria-placeholder="email" />
+          </div>
+          <label for="password"
+            ><font color="#FFF"><b>masukan Password anda</b></font></label
+          >
+          <div class="field-wrap">
+            <input type="password" required placeholder="Password" />
+          </div>
+          <p>
+            <label
+              ><a href="registerhotel.html">
+                <font color="#D6D7C5"> forgot password?</font></a
+              ></label
+            >
+          </p>
+
+          <button class="button button-block">Login</button>
+        </form>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="/js/main.js"></script>
+      <div class="signin">
+        <label for="belum punya akun"
+          ><font color="#FFF">belum punya akun ??</font
+          ><a href="registerhotel.html">
+            <font color="#D6D7C5"> signin</font></a
+          ></label
+        >
+      </div>
+    </center>
+  </body>
+</html>
