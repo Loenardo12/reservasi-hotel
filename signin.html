@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
-    <link rel="stylesheet" href="login.css" />
+    <title>sign in</title>
+    <link rel="stylesheet" href="signin.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="login.js" />
   </head>
   <body>
     <nav>
       <a href="index.html">Home</a>
-      <a href="signin.html">sign in</a>
+      <a href="login.html">log in</a>
       <a href="service.html">service</a>
       <a href="contact.html">Contact Us</a>
     </nav>
     <div class="wrapper">
       <form action="" class="form">
-        <h1 class="title">log in</h1>
+        <h1 class="title">sign in</h1>
         <div class="inp">
           <input
             type="text"
@@ -38,9 +38,40 @@
             required
           />
         </div>
-        <button class="submit">Log In</button>
+        <div class="inp">
+          <input
+            type="password"
+            name=""
+            id=""
+            class="input"
+            placeholder="CONFIRM PASSWORD"
+            required
+          />
+        </div>
+        <div class="inp">
+          <input
+            type="text"
+            name=""
+            id=""
+            class="input"
+            placeholder="FIRST NAME"
+            required
+          />
+        </div>
+        <div class="inp">
+          <input
+            type="text"
+            name=""
+            id=""
+            class="input"
+            placeholder="LAST NAME"
+            required
+          />
+        </div>
+
+        <button class="submit">sign in</button>
         <p class="footer">
-          Belum punya akun? <a href="signin.html" class="link">registrasi</a>
+          sudah punya akun? <a href="register.html" class="link">log in</a>
         </p>
       </form>
       <div></div>
@@ -49,14 +80,5 @@
         <br />
       </div>
     </div>
-    <script>
-      let docTitle = document.title;
-      window.addEventListener("blur", () => {
-        document.title = "Come Back Please";
-      });
-      window.addEventListener("focus", () => {
-        document.title = docTitle;
-      });
-    </script>
   </body>
 </html>
