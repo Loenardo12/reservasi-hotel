@@ -149,7 +149,7 @@ body.dark footer {
 
 .about p {
   font-size: 1.5em;
-  margin-bottom: -40px;
+  margin-bottom: -100px;
 }
 
 .about h3 {
@@ -157,7 +157,7 @@ body.dark footer {
 }
 
 .about p {
-  text-shadow: 2px 2px 2px #333;
+  text-shadow: 1px 1px 1px #333;
   font-size: 1.8rem;
 }
 

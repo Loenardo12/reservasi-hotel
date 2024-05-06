@@ -10,3 +10,6 @@ $(function () {
     }
   });
 });
+window.onload = function myFunction() {
+  alert("CLICK TOMBOL CLICK HERE!!");
+};
