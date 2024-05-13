@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="login.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="login.js" />
+    
   </head>
   <body>
     <nav>
@@ -16,12 +17,12 @@
       <a href="contact.html">Contact Us</a>
     </nav>
     <div class="wrapper">
-      <form action="" class="form">
+      <form action="entrylogin.php" method="post"  class="form">
         <h1 class="title">log in</h1>
         <div class="inp">
           <input
             type="text"
-            name=""
+            name="nama"
             id=""
             class="input"
             placeholder="EMAIL/PHONE NUMBER"
@@ -31,14 +32,14 @@
         <div class="inp">
           <input
             type="password"
-            name=""
+            name="password"
             id=""
             class="input"
             placeholder="PASSWORD"
             required
           />
         </div>
-        <button class="submit">Log In</button>
+        <button class="submit" name="simpan">Log In</button>
         <p class="footer">
           Belum punya akun? <a href="signin.html" class="link">registrasi</a>
         </p>
