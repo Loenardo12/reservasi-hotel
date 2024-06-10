@@ -17,7 +17,7 @@
             </a>
         </li>
         <li>
-            <a href="/transaction" class="{{ request()->Is('transaction*') ? 'active' : '' }}">
+            <a href="/transaksi" class="{{ request()->Is('transaction*') ? 'active' : '' }}">
                 <i class="bx bx-list-ul"></i>
                 <span class="links_name">Transaction</span>
             </a>

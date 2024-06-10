@@ -42,6 +42,7 @@
             alert(
                 `Tanggal: ${tanggal}\nNama: ${nama}\nKategori: ${kategori}\nHarga: ${harga}\nNomor HP: ${nomorhp}\nStatus: ${status}`);
         }
+        
     </script>
 
 </body>

@@ -16,6 +16,7 @@ class Category extends Model
     protected $fillable = ['nama', 'harga', 'deskripsi','gambar'];
     public $timestamps = false;
 
+   
       public function transaction()
     {
         return $this->hasMany(Transaction::class, 'category_id', 'id_categories');

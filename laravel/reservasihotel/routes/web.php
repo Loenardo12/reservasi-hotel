@@ -36,3 +36,4 @@ Route::get('/transaksi', [TransactionController::class, 'index']);
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/transaction/cetak', [TransactionController::class, 'cetak']);
 
+

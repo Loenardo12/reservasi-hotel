@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Barryvdh\DomPDF\Facade\Pdf;
-
 
 class Transaction extends Model
 {
-     use HasFactory;
+      use HasFactory;
     protected $table = 'transactions';
     protected $fillable = ['nama', 'nomorhp', 'alamat', 'category_id', 'harga', 'status'];
 
@@ -17,6 +15,5 @@ class Transaction extends Model
     {
         return $this->belongsTo(Category::class, 'category_id', 'id_categories');
     }
-
 
 }

@@ -23,4 +23,7 @@ class TransactionController extends Controller
         return $pdf->download('laporan-transaksi.pdf');
     }
 
+
+    
+
 }
