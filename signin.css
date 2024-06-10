@@ -57,10 +57,14 @@ nav > a:hover {
   font-style: italic;
 }
 
-.inp {
-  padding-bottom: 10px;
-  border-bottom: 2px solid #eee;
+div .inp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #00ffff;
 }
+
 .input {
   border: none;
   outline: none;
