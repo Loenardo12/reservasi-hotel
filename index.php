@@ -1,4 +1,5 @@
-<html>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>My Landing Page</title>
@@ -97,7 +98,8 @@
           <li>restoran</li>
           <li>dan lainya</li>
         </ul>
-      >
+      
+
     </main>
     <section class="about" id="about">
       <h3>Reservasi Hotel</h3>

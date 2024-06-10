@@ -1,9 +1,4 @@
-<?php
-session_start();
-if ($_SESSION['username'] == null) {
-	header('location:../login.php');
-}
-?>
+
 
 <!DOCTYPE html>
 <head>
@@ -35,11 +30,8 @@ if ($_SESSION['username'] == null) {
               <span class="btn btn-default">Go</span>
             </form>
           </li>
-          <li class="active"><a href="#"><i class="fa fa-home"></i>Dashboard</a></li>
-          
-          <li><a href="admin/catalog/categories.php"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>catalog</a></li>
-          <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
-          <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>
+          <li class="active"><a href="dashboard.php"><i class="fa fa-home"></i>Dashboard</a></li>
+          <li><a href="categories.php"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>categories</a></li>
           <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
@@ -48,8 +40,8 @@ if ($_SESSION['username'] == null) {
         <div class="mo-content">
           <ol class="breadcrumb">
             <li><a href="index.html">Admin Panel</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li class="active">Overview</li>
+            <li><a href="categories.php">Categories</a></li>
+            
     
 <div class="home-content">
 			<h3>Categories</h3>
@@ -67,13 +59,22 @@ if ($_SESSION['username'] == null) {
 					</tr>
 				</thead>
 				<tbody>
-					
-<tr>
-				<td colspan='5' align ='center'>
-                          
+					<?php
+					include 'koneksi.php';
+					$sql = "SELECT * FROM tb_reservasi";
+					$result = mysqli_query($koneksi, $sql);
+					if (mysqli_num_rows($result) == 0) {
+						echo "
+			   <tr>
+				<td colspan='5' align='center'>
+                           Data Kosong
                         </td>
 			   </tr>
-				                    <tr>
+				";
+					}
+					while ($data = mysqli_fetch_assoc($result)) {
+						echo "
+                    <tr>
  <td>
                         <img src='../img_categories/$data[photo]' width='200px'>
                       </td>
@@ -89,9 +90,9 @@ if ($_SESSION['username'] == null) {
                         </a>
                       </td>
                     </tr>
-                  
-					
-					
+                  ";
+					}
+					?>
 				</tbody>
 			</table>
 		</div>

@@ -1,13 +1,13 @@
 <?php 
-	session_start();
-	if($_SESSION['username'] == null) {
-		header('location:login.php');
-	}
+    
+    include('koneksi.php');
 ?>
+
+
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>Dashboard</title>
+    <title>Dashboard</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width">        
@@ -34,12 +34,33 @@
               <span class="btn btn-default">Go</span>
             </form>
           </li>
-          <li class="active"><a href="admin.php"><i class="fa fa-home"></i>Dashboard</a></li>
-          
-          <li><a href="categories.php"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>catalog</a></li>
-          <li><a href="tables.html"><i class="fa fa-users"></i>transaction</a></li>
-          <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
-          <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <li class="active"><a href="dashboard.php"><i class="fa fa-home"></i>Dashboard</a></li>
+          <li><a href="categories.php"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>categories</a></li>
+          <li><a href="logout.php" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="mo-content-wrapper">
+        <div class="mo-content">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Admin Panel</a></li>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            
+    
+
+<div class="home-content">
+  <h3>Categories</h3>
+  <div class="widget-container">
+                <div class="widget">
+                <h2>Total Reservasi</h2>
+                <p><?php echo $totalReservasi; ?></p>
+                <a href="categories.php">View Details</a>
+
+  </div>
+  </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -53,25 +74,13 @@
           </div>
         </div>
       </div>
-        </ul>
-      </div><!--/.navbar-collapse -->
-
-      <div class="mo-content-wrapper">
-        <div class="mo-content">
-          <ol class="breadcrumb">
-            <li><a href="index.html">Admin Panel</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li class="active">Overview</li>
-          </ol>
-      <!-- Modal -->
-      
       <footer class="mo-footer">
         <div class="mo-copyright">
           <p>Copyright &copy; 2024 Hotel Reservation</p>
         </div>
       </footer>
     </div>
-      </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Chart.min.js"></script>

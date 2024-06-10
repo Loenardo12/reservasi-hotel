@@ -1,7 +1,7 @@
 <?php 
 
 include 'koneksi.php';
-if(isset($_POST['login'])) {
+if(isset($_POST['simpan'])) {
   $requestUsername = $_POST['username'];
   $requestPassword = $_POST['password'];
 
@@ -14,7 +14,7 @@ if(isset($_POST['login'])) {
         while($row = mysqli_fetch_assoc($result)) {
             session_start();
             $_SESSION['username'] = $row['username'];
-            header('location:admin.php');
+            header('location:dashboard.php');
         }
       } else { 
           echo "
