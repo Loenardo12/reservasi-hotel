@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(https://img.lovepik.com/background/20211021/large/lovepik-color-abstract-background-image_400726603.jpg);
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+header {
+  text-align: center;
+  margin-top: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav {
+  background: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 22px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav > a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 22px;
+}
+nav > a:hover {
+  transition: 0.25s;
+  background: rgb(56, 130, 209);
+  color: white;
+}
+.people {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.stakeholders {
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.stakeholders img {
+  border-radius: 0.6rem;
+}
+.persons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+.social {
+  text-align: center;
+  margin: 2rem;
+}
+
+.socicons {
+  font-size: 1.3rem;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.label {
+  width: 50px;
+  height: 29px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
+.switcher {
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.checkbox:checked + .label .switcher {
+  transform: translateX(24px);
+}
+body.dark {
+  background-color: #1e272e;
+}
+
+body.dark .bar {
+  background-color: #fff;
+}
+
+body.dark p {
+  color: #fff;
+}
+
+body.dark h3 {
+  color: #fff;
+}
+
+body.dark nav {
+  background-color: #1e272e;
+  box-shadow: 2px 3px 2px #111010;
+}
+
+body.dark ul {
+  background-color: #1e272e;
+}
+
+body.dark .name {
+  color: var(--primary-color);
+}
+
+body.dark .role {
+  color: var(--secondary-color);
+}
+
+body.dark footer {
+  color: #fff;
+  border-top: 1px solid #111010;
+  box-shadow: 0px -2px 3px #111010;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+.about {
+  position: relative;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.about h3 {
+  font-size: 3em;
+  margin-bottom: -49px;
+  background-color: aqua;
+  padding: 5px;
+  border-radius: 22px;
+}
+
+.about p {
+  font-size: 1.5em;
+  margin-bottom: -100px;
+}
+
+.about h3 {
+  text-shadow: 2px 2px 2px #333;
+}
+
+.about p {
+  text-shadow: 1px 1px 1px #333;
+  font-size: 1.8rem;
+}
+
+.slides {
+  width: 100%;
+  position: relative;
+}
+.slides .slide {
+  display: none;
+}
+.slides .slide img {
+  width: 50%;
+  height: 20%;
+  margin-left: 25%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.slides .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.slides .navigation .prev,
+.slides .navigation .next {
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+.slides .navigation .prev:hover,
+.slides .navigation .next:hover {
+  background: rgba(0, 0, 0, 1);
+}
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 992px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+@media (max-width: 360px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 11px;
+    padding: 6px;
+  }
+}
